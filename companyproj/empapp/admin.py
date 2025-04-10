@@ -1,5 +1,8 @@
 from django.contrib import admin
-from .models import Employee
+from .models import Employee  # Import your Employee model
 
-# Register your models here.
-admin.site.register(Employee)
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display = ('name', 'title', 'salary')  # Fields to display in the admin list view
+
+# Register the Employee model with the customized admin
+admin.site.register(Employee, EmployeeAdmin)
