@@ -11,6 +11,9 @@
                 <th>Name</th>
                 <th>Title</th>
                 <th>Salary</th>
+                {% if show_hire_duration %}
+                <th>Hire Duration (Days)</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
@@ -19,6 +22,15 @@
                 <td>{{ employee.name }}</td>
                 <td>{{ employee.title }}</td>
                 <td>{{ employee.salary }}</td>
+                {% if show_hire_duration %}
+                <td>
+                    {% if employee.hire_duration == "N/A" %}
+                        Not Available
+                    {% else %}
+                        {{ employee.hire_duration }}
+                    {% endif %}
+                </td>
+                {% endif %}
             </tr>
             {% endfor %}
         </tbody>
