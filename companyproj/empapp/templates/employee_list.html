@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Information</title>
+    <style></style>
+</head>
+<body>
+    <h1>All Employees</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Extension</th>
+                <th>Email</th>
+                <th>Salary</th>
+                <th>Hire Date</th>
+                <th>Hire Duration (Days)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in employee_info %}
+            <tr>
+                <td>{{ e.name }}</td>
+                <td>{{ e.title }}</td>
+                <td>{{ e.extension }}</td>
+                <td>{{ e.email }}</td>
+                <td>{{ e.salary }}</td>
+                <td>{{ e.hire_date }}</td>
+                <td>{{ e.hire_duration }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
+    <h1>Employees with Salary Greater Than 1000</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in employees_salary %}
+            <tr>
+                <td>{{ e.name }}</td>
+                <td>{{ e.salary }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
+    <h1>Employees with Name Starting with 'Patterson'</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in employees_name %}
+            <tr>
+                <td>{{ e.name }}</td>
+                <td>{{ e.title }}</td>
+                <td>{{ e.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
+    <h1>Employees Born After 1990</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for e in employees_born %}
+            <tr>
+                <td>{{ e.name }}</td>
+                <td>{{ e.DOB }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+ 
+    <h1>Average Salary</h1>
+    <p>The average salary of employees is: {{ average_salary }}</p>
+</body>
+</html>
