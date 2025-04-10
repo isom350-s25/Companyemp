@@ -1,0 +1,24 @@
+<h1> Employee Details</h1>
+<table border="1">
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Extension</th>
+        <th>Employee Email</th>
+        <th>Employee Title</th>
+        <th>Employee Salary</th>
+
+    </tr>
+    {% for p in patterso %}
+    <tr>
+
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.extension }}</td>
+        <td>{{ p.email }}</td>
+        <td>{{ p.title }}</td>
+        <td>{{ p.salary }}</td>
+  
+    {% endfor %}
+    </tr>
+</table>

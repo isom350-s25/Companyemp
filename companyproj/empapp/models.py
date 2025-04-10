@@ -11,3 +11,4 @@ class Employee(models.Model):
     salary = models.DecimalField(max_digits=10, decimal_places=2)
     DOB = models.DateField(null=True, blank=True)
     hire_date = models.DateField(null=True, blank=True)
+   

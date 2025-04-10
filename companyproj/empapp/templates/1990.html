@@ -1,0 +1,26 @@
+
+
+<h1> Employee Details</h1>
+<table border="1">
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Extension</th>
+        <th>Employee Email</th>
+        <th>Employee Title</th>
+        <th>Employee Salary</th>
+
+    </tr>
+    {% for b in born %}
+    <tr>
+
+        <td>{{ b.id }}</td>
+        <td>{{ b.name }}</td>
+        <td>{{ b.extension }}</td>
+        <td>{{ b.email }}</td>
+        <td>{{ b.title }}</td>
+        <td>{{ b.salary }}</td>
+  
+    {% endfor %}
+    </tr>
+</table>
