@@ -22,12 +22,6 @@ def employees_avg_salary(request):
     return render(request, 'avg_salary.html', {'avg_salary': avg_salary})
 
 
-def duration_hired(request):
-    employees = Employee.objects.all()
-    for employee in employees:
-        if employee.hire_date:
-            duration = datetime.now().date() - employee.hire_date
-            employee.duration_hired = duration.days
-        else:
-            employee.duration_hired = None
+def name_patterson(request):
+    employees = Employee.objects.filter(name__icontains='patterson') 
     return render(request, 'employees.html', {'employees': employees})
