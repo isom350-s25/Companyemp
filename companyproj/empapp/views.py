@@ -14,3 +14,9 @@ def salary(request):
         "salaries":salary
     }
     return render(request,"salary.html",context)
+def name(request):
+    name = Employee.objects.filter(name__icontains= "Patterson")
+    context = {
+        "names":name
+    }
+    return render(request,"name.html",context)
