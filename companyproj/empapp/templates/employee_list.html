@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Employee List</title>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Salary</th>
+                {% if show_hire_duration %}
+                <th>Hire Duration (Days)</th>
+                {% endif %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in employees %}
+            <tr>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.title }}</td>
+                <td>{{ employee.salary }}</td>
+                {% if show_hire_duration %}
+                <td>
+                    {% if employee.hire_duration == "N/A" %}
+                        Not Available
+                    {% else %}
+                        {{ employee.hire_duration }}
+                    {% endif %}
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
