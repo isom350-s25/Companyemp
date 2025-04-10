@@ -1,0 +1,9 @@
+<html>
+<head>
+    <title>Employee List</title>
+    <ul>
+        {% for employees in employees %}
+            <li>{{ employees.name }} - {{ employees.title }} - {{ employees.salary}} </li>
+        {% endfor %}
+    </ul>
+</html>
