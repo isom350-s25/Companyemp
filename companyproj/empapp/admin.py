@@ -5,4 +5,3 @@ from .models import Employee
 admin.site.register(Employee)
 class EmployeeAdmin(admin.ModelAdmin):
     list_display = ('name', 'position', 'salary')
-
