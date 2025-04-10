@@ -5,5 +5,6 @@ urlpatterns = [
     path("salary/",views.salary , name = "salary" ),
     path("name/",views.name , name = "name" ),
     path("born/",views.born , name = "born" ),
+    path("bonus/",views.duration , name = "bonus" ),
 
 ]
