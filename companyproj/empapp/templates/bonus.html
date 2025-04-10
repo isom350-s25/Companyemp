@@ -1,0 +1,21 @@
+<table border="1" style="width: 100%; border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Hire Date</th>
+            <th>Days Hired</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for employee in duration %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.hire_date }}</td>
+            <td>{{ employee.hire_duration }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<p>Average Salary: {{ average_salary }}</p>

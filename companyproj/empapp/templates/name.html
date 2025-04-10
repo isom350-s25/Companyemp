@@ -1,0 +1,23 @@
+
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: middle;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Extension</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for n in names %}
+        <tr>
+            <td>{{ n.id }}</td>
+            <td>{{ n.name }}</td>
+            <td>{{ n.extension }}</td>
+            <td>{{ n.email }}</td>
+            <td> {{n.salary}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
