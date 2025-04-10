@@ -1,0 +1,23 @@
+
+<table border="1" style="width: 100%; border-collapse: collapse; text-align: middle;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Extension</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for b in born %}
+        <tr>
+            <td>{{ b.id }}</td>
+            <td>{{ b.name }}</td>
+            <td>{{ b.extension }}</td>
+            <td>{{ b.email }}</td>
+            <td> {{b.salary}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

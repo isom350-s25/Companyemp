@@ -20,3 +20,9 @@ def name(request):
         "names":name
     }
     return render(request,"name.html",context)
+def born(request):
+    born = Employee.objects.filter(DOB__lt = "1990-01-01")
+    context = {
+        "born":born
+    }
+    return render(request,"born.html",context)
